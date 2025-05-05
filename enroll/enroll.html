@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enrollment Management System</title>
+  <link rel="icon" href="/images/sia.png" type="image/png">
+  <link rel="stylesheet" href="enroll.css">
+</head>
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="/images/sia.png" alt="School of Innovative Advancement">
+    </div>
+    <ul>
+      <li><a href="/home/home.html">HOME</a></li>
+      <li><a href="/history/history.html">ABOUT SIA</a></li>
+      <li class="dropdown">
+        <a href="#">CONTACT US</a>
+        <div class="dropdown-content">
+          <p>Contact Us</p>
+          <p>#2025 Innovation Drive, Techno Park<br>Nova City, Philippines 1200</p>
+          <p>Contact #: (+63) 912-345-6789<br>
+          Email: <a href="mailto:info@sia.edu.ph">info@sia.edu.ph</a></p>
+        </div>
+      </li>
+      <li><a href="/admission/admis.html">ADMISSION</a></li>
+    </ul>
+  </nav>
+
+  <header>Enrollment Management System</header>
+
+  <main>
+    <form method="POST" action="enroll.php">
+      <!-- Basic Info Section -->
+      <section>
+        <h2>Basic Information</h2>
+        <div class="grid-4">
+          <div>
+            <label>Admission Type <span>*</span>
+              <select name="admissionType" required>
+                <option value=""></option>
+                <option value="regular">Regular</option>
+                <option value="transferee">Transferee</option>
+                <option value="returnee">Returnee</option>
+              </select>
+            </label>
+          </div>
+
+          <div><label for="lastName">Last Name <span>*</span></label><input id="lastName" name="lastName" type="text" required /></div>
+          <div><label for="firstName">First Name <span>*</span></label><input id="firstName" name="firstName" type="text" required /></div>
+          <div><label for="middleName">Middle Name</label><input id="middleName" name="middleName" type="text" /></div>
+
+          <div>
+            <label>Working Student?</label>
+            <div class="flex space-x-4 items-center">
+              <label><input type="radio" name="workingStudent" value="yes" /> Yes</label>
+              <label><input type="radio" name="workingStudent" value="no" /> No</label>
+            </div>
+          </div>
+
+          <div>
+            <label for="gender">Gender <span>*</span></label>
+            <select id="gender" name="gender" required>
+              <option value=""></option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="civilStatus">Civil Status <span>*</span></label>
+            <select id="civilStatus" name="civilStatus" required>
+              <option value=""></option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widowed">Widowed</option>
+              <option value="separated">Separated</option>
+              <option value="annulled">Annulled</option>
+            </select>
+          </div>
+
+          <div><label for="religion">Religion</label><input id="religion" name="religion" type="text" /></div>
+
+          <div>
+            <label for="yrlvl">Year Level</label>
+            <select id="yrlvl" name="yrlvl" required>
+              <option value=""></option>
+              <option value="1st year">1st year</option>
+              <option value="2nd year">2nd year</option>
+              <option value="3rd year">3rd year</option>
+              <option value="4th year">4th year</option>
+            </select>
+          </div>
+
+          <div><label for="birthday">Birthday</label><input id="birthday" name="birthday" type="date" required /></div>
+          <div><label for="contact">Contact #</label><input id="contact" name="contact" type="text" required /></div>
+
+          <div style="grid-column: span 4;"><label for="email">E-mail <span>*</span></label><input id="email" type="email" name="email" required /></div>
+          <div style="grid-column: span 4;"><label for="address">Address <span>*</span></label><input id="address" name="address" type="text" required /></div>
+
+          <div><label for="street">Street <span>*</span></label><input id="street" type="text" name="street" required></div>
+          <div><label for="city">City <span>*</span></label><input id="city" type="text" name="city" required></div>
+          <div><label for="province">Province <span>*</span></label><input id="province" type="text" name="province" required></div>
+          <div><label for="postal">Postal Code <span>*</span></label><input id="postal" type="text" name="postal" required></div>
+        </div>
+        <hr />
+      </section>
+
+      <!-- Emergency Contact Section -->
+      <section>
+        <h2>Emergency Contact</h2>
+        <p class="subtext">Parent's/Guardian's Information</p>
+
+        <div class="grid-2">
+          <div>
+            <label for="emergency_contact_type">Select Emergency Contact Type <span>*</span></label>
+            <select id="emergency_contact_type" name="emergency_contact_type" required>
+              <option value="">-- Select --</option>
+              <option value="father">Father</option>
+              <option value="mother">Mother</option>
+              <option value="guardian">Guardian</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <div><label for="fatherLastName">Father's Last Name <span>*</span></label><input id="fatherLastName" name="fatherLastName" type="text" required /></div>
+          <div><label for="fatherFirstName">Father's First Name <span>*</span></label><input id="fatherFirstName" name="fatherFirstName" type="text" required /></div>
+          <div><label for="fatherMiddleName">Father's Middle Name</label><input id="fatherMiddleName" name="fatherMiddleName" type="text" /></div>
+          <div><label for="fatherContact">Father's Contact #</label><input id="fatherContact" name="fatherContact" type="text" required /></div>
+        </div>
+
+        <p class="subtext highlight">Mother's Maiden Name</p>
+        <div class="grid-4">
+          <div><label for="motherLastName">Last Name <span>*</span></label><input id="motherLastName" name="motherLastName" type="text" required /></div>
+          <div><label for="motherFirstName">First Name</label><input id="motherFirstName" name="motherFirstName" type="text" /></div>
+          <div><label for="motherMiddleName">Middle Name</label><input id="motherMiddleName" name="motherMiddleName" type="text" /></div>
+          <div><label for="motherContact">Contact #</label><input id="motherContact" name="motherContact" type="text" required /></div>
+        </div>
+
+        <p class="subtext">Guardian's Information</p>
+        <div class="grid-4">
+          <div><label for="guardianLastName">Last Name</label><input id="guardianLastName" name="guardianLastName" type="text" /></div>
+          <div><label for="guardianFirstName">First Name</label><input id="guardianFirstName" name="guardianFirstName" type="text" /></div>
+          <div><label for="guardianMiddleName">Middle Name</label><input id="guardianMiddleName" name="guardianMiddleName" type="text" /></div>
+          <div><label for="guardianContact">Contact #</label><input id="guardianContact" name="guardianContact" type="text" required /></div>
+        </div>
+      </section>
+
+      <div class="flex justify-center" style="margin-top: 2rem;">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>BSIT – 2024 Student Information Management © 2025</footer>
+</body>
+</html>

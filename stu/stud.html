@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Innovative Advancement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img class="logo" src="/images/sia.png" alt="Logo">
+                <h3 class="logo-title">School of Innovative Advancement</h3>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#" id="dashboard">Dashboard</a></li>
+                    <li><a href="#" id="profile">Profile</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <input type="text" placeholder="Search for it..." class="search-bar">
+                <div class="log-out">
+                    <button class="logout-button" onclick="logout()">Log Out</button>
+                </div>                
+            </header>
+
+            <section class="content-section" id="content">
+                <!-- Dashboard Section (Default View) -->
+                <div class="dashboard-section">
+                    <div class="dashboard-banner">
+                        <img src="/images/announcement.png" alt="Announcement Icon" class="dashboard-icon">
+                        <h2>Latest Announcements</h2>
+                    </div>
+                    <div class="dashboard-content">
+                        <ul class="announcement-list">
+                            <li>📢 Class schedules updated for next semester.</li>
+                            <li>🎓 Graduation ceremony on June 15, 2025.</li>
+                            <li>📌 Enrollment for new students starts next week.</li>
+                        </ul>
+                        <img src="/images/announce.png" alt="Dashboard Announcement Image" class="dashboard-img">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>BSIT - 22024 Admission © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
